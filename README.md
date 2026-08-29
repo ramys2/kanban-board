@@ -35,10 +35,23 @@ Drag a task onto another task to place it before or after that task. Drop it int
 ### Starting, saving, and loading boards
 
 - **New board** resets the workspace to the default three columns.
-- **Save JSON** downloads the current board as one `.json` file.
+- **Save JSON** starts a standard browser download containing the current board.
 - **Load** imports a board file and replaces the current workspace after validating its structure and format version.
 
 The active board is also written to `localStorage` after changes. This convenience copy is specific to the browser and page origin; use **Save JSON** for a portable backup or to move a board between browsers.
+
+#### Choosing a download location
+
+The app cannot override the browser's download preferences. To choose a folder whenever you save a board, enable the browser setting that prompts for a location. Otherwise, the JSON file is saved in the configured Downloads folder.
+
+This option is available in the major modern desktop browsers:
+
+- **Chrome:** **Settings → Downloads → Ask where to save each file before downloading** ([Chrome Help](https://support.google.com/chrome/answer/95759)).
+- **Edge:** open `edge://settings/downloads`, then enable **Ask me what to do with each download** ([Microsoft Learn](https://learn.microsoft.com/en-us/troubleshoot/microsoft-edge/development/download-failures)).
+- **Firefox:** **Settings → General → Files and Applications → Downloads → Always ask you where to save files** ([Firefox Help](https://support.mozilla.org/en-US/kb/manage-downloads-preferences-using-downloads-menu)).
+- **Safari on Mac:** **Safari → Settings → General → File download location → Ask for each download** ([Safari User Guide](https://support.apple.com/guide/safari/general-ibrw1072/mac)).
+
+Browser-managed or organization-managed settings can override these choices.
 
 ## Board file format
 
